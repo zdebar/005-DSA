@@ -4,22 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba0a5b89-2e90-444a-92d9-814d5f75127a" name="Changes" comment="First testing commit">
-      <change afterPath="$PROJECT_DIR$/Search_Binary_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Search_Linear_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Bubble_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Bubble_02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Counting_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Insertion_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Insertion_02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Merge_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Merge_02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Quicksort_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Radix_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Radix_02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Selection_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Selection_02.py" afterDir="false" />
+    <list default="true" id="ba0a5b89-2e90-444a-92d9-814d5f75127a" name="Changes" comment="Daily work">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithms/Memoization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graphs/Graph_Classes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graphs/Graph_DW.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graphs/Graph_Matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graphs/Graph_Traversal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hash_Tables/Hash_Map.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hash_Tables/Hash_Set_01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hash_Tables/Hash_Table_Linked.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked_List/LL_Operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked_List/Linked_List_Doubly.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked_List/Linked_List_Doubly_Circular.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked_List/Linked_List_Singly.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked_List/Linked_List_Singly_Circular.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stack_Queues/Queue_Array.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stack_Queues/Queue_LL.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stack_Queues/Stack_Array.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stack_Queues/Stack_LL.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trees/AVL_Tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trees/Binary_Search_Tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trees/Binary_Tree_Array.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trees/Binary_Trees.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search_Binary_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Search/Search_Binary_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search_Linear_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Search/Search_Linear_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Bubble_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Bubble_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Bubble_02.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Bubble_02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Counting_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Counting_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Insertion_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Insertion_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Insertion_02.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Insertion_02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Merge_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Merge_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Merge_02.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Merge_02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Quicksort_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Quicksort_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Radix_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Radix_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Radix_02.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Radix_02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Selection_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Selection_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Selection_02.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/Sort_Selection_02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,63 +59,57 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "zdebar"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zdebar&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/zdebar/DSA.git",
-    "accountId": "09fb180a-3b5f-471e-aa2c-734cab7e1788"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/zdebar/DSA.git&quot;,
+    &quot;accountId&quot;: &quot;09fb180a-3b5f-471e-aa2c-734cab7e1788&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2f5RcNnt9I3y9irzz8Y85iucK8q" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.Binary_Search_Tree.executor": "Run",
+    "Python.Graph_Classes.executor": "Run",
+    "Python.Graph_Matrix.executor": "Run",
+    "Python.Hash_Table_Linked.executor": "Run",
+    "Python.Memoization.executor": "Run",
     "Python.Sort_Counting_01.executor": "Run",
     "Python.Sort_Insertion_02.executor": "Run",
     "Python.Sort_Merge.executor": "Run",
     "Python.Sort_Quicksort_01.executor": "Run",
     "Python.Sort_Radix_02.executor": "Run",
+    "Python.Test.executor": "Run",
+    "Python.Traversal_DFS.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="DSA" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Active\DSA\Algorithms" />
+      <recent name="D:\Active\DSA\Sort" />
+      <recent name="D:\Active\DSA\Search" />
+      <recent name="D:\Active\DSA\Linked_List" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,11 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713089397111</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Daily work">
+      <option name="closed" value="true" />
+      <created>1713119058180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713119058180</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First testing commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First testing commit" />
+    <MESSAGE value="Daily work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Daily work" />
   </component>
 </project>
