@@ -1,20 +1,20 @@
 computation_count = 0
 
 
-def F(n):
+def f(n):
     global computation_count
     computation_count += 1
     if n <= 1:
         return n
     else:
-        return F(n - 1) + F(n - 2)
+        return f(n - 1) + f(n - 2)
 
 
 computation_count_mem = 0
 
 
-def F_mem(n):
-    if memo[n] != None:  # Already computed
+def f_mem(n):
+    if memo[n] is not None:  # Already computed
         return memo[n]
     else:  # Computation needed
         global computation_count_mem
@@ -22,13 +22,13 @@ def F_mem(n):
         if n <= 1:
             memo[n] = n
         else:
-            memo[n] = F_mem(n - 1) + F_mem(n - 2)
+            memo[n] = f_mem(n - 1) + f_mem(n - 2)
         return memo[n]
 
 
-print('F(30) = ', F(30))
+print('F(30) = ', f(30))
 print(f'Number of computations: {computation_count}')
 print('\nUsing memoization:')
 memo = [None] * 31
-print('F(30) = ', F_mem(30))
+print('F(30) = ', f_mem(30))
 print(f'Number of computations with memoization: {computation_count_mem}')
