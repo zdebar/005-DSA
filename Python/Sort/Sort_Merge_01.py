@@ -3,11 +3,11 @@ def mergeSort(arr):
         return arr
 
     mid = len(arr) // 2
-    leftHalf = arr[:mid]
-    rightHalf = arr[mid:]
+    left_half = arr[:mid]
+    right_half = arr[mid:]
 
-    sortedLeft = mergeSort(leftHalf)
-    sortedRight = mergeSort(rightHalf)
+    sortedLeft = mergeSort(left_half)
+    sortedRight = mergeSort(right_half)
 
     return merge(sortedLeft, sortedRight)
 
