@@ -1,7 +1,12 @@
-// Remove duplicates ---- OK
-function removeDuplicates(lst) {
-  return Array.from(new Set(lst))
+const arrayA = [1, 2, 3, 4, 5];
+
+// Question 6 REVERSE ARRAY ----- OK
+function reverse(array) {
+  newArray = [...array]
+  for (let i = 0; i < array.length/2; i++) {
+    [newArray[i], newArray[-1-i]] = [newArray[-1-i], newArray[i]]
+  }  
+  return newArray
 }
 
-const myListDuplicates = [1, 1, 2, 2, 3, 4, 5];
-console.log(removeDuplicates(myListDuplicates));  // Output: [1, 2, 3, 4, 5]
+console.log(reverse(arrayA));
