@@ -13,9 +13,9 @@ function countWordFrequency(words) {
 
 // Common keys
 function mergeDicts(dict1, dict2) {
-  const result = { ...dict1 };  // Create a copy of dict1 using spread syntax
+  const result = { ...dict1 }; 
   for (let [key, value] of Object.entries(dict2)) {
-    result[key] = (result[key] || 0) + value;  // Merge the values, defaulting to 0 if the key doesn't exist
+    result[key] = (result[key] || 0) + value; 
   }
   return result;
 }
@@ -51,23 +51,34 @@ function reverseDict(myDict) {
   }, {});
 }
 
+// Reverse dictionary MY VARIANT
+function reverseDict(myDict) {
+  const reversedDict = {}
+  for (let key in myDict) {
+    reversedDict[myDict[key]] = key;
+  }
+  return reversedDict;
+}
+
 const myDict2 = { a: 1, b: 2, c: 3 };
 console.log(reverseDict(myDict2)); 
 
 
 // Conditional filter
 function filterDict(myDict, condition) {
-  return Object.entries(myDict)
-    .filter(([key, value]) => condition(key, value)) 
-    .reduce((filteredObj, [key, value]) => {
-      filteredObj[key] = value; 
-      return filteredObj;
-    }, {});
+  const filteredObj = {};
+  for (const key in myDict) {
+    if (condition(key, myDict[key])) {
+      filteredObj[key] = myDict[key];
+    }
+  }
+  return filteredObj;
 }
 
 const myDict3 = { a: 10, b: 20, c: 5 };
 const condition = (key, value) => value > 10;
 console.log(filterDict(myDict3, condition)); 
+
 
 
 // Check same frequency
