@@ -10,6 +10,13 @@ function nthFibonnaciMem(n, memo = {}) {
   return memo[n]
 }
 
+function nthFibonacciMemArr(n, memo = []) {
+  if (n <= 2) return 1;
+  if (memo[n] !== undefined) return memo[n];
+  memo[n] = nthFibonacciMem(n - 1, memo) + nthFibonacciMem(n - 2, memo);
+  return memo[n];
+}
+
 function nthFibonnaciIter(n) {
   if (n <= 1) return 1;
   let a = 1, b = 1;
@@ -23,4 +30,6 @@ function nthFibonnaciIter(n) {
 
 console.log(nthFibonnaci(8))
 console.log(nthFibonnaciMem(8))
+console.log(nthFibonacciMemArr(8))
 console.log(nthFibonnaciIter(8))
+
