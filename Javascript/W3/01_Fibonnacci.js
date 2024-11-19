@@ -13,7 +13,7 @@ function nthFibonnaciMem(n, memo = {}) {
 function nthFibonacciMemArr(n, memo = []) {
   if (n <= 2) return 1;
   if (memo[n] !== undefined) return memo[n];
-  memo[n] = nthFibonacciMem(n - 1, memo) + nthFibonacciMem(n - 2, memo);
+  memo[n] = nthFibonacciMemArr(n - 1, memo) + nthFibonacciMemArr(n - 2, memo);
   return memo[n];
 }
 
@@ -32,4 +32,9 @@ console.log(nthFibonnaci(8))
 console.log(nthFibonnaciMem(8))
 console.log(nthFibonacciMemArr(8))
 console.log(nthFibonnaciIter(8))
+
+function nthFibonnaci2(n) {
+  if (n <= 2) return 1;
+  return nthFibonnaci2(n - 1) + nthFibonnaci2(n - 2);
+}
 

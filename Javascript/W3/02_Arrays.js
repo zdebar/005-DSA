@@ -1,5 +1,5 @@
-myArray = [7, 12, 9, 4, 11]
-minVal = myArray[0]
+let myArray = [7, 12, 9, 4, 11];
+let minVal = -Infinity;
 
 for (let i of myArray) {
   if (i < minVal) {
@@ -8,3 +8,4 @@ for (let i of myArray) {
 }
 
 console.log(minVal);
+
