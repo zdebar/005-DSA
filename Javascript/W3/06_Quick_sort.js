@@ -9,7 +9,7 @@ function quickSort(array) {
 
   let pivot = array[array.length - 1];  
   let left = [], right = [];  
-  
+
   for (let i = 0; i < array.length - 1; i++) {
       if (array[i] < pivot) {
           left.push(array[i]); 
@@ -21,4 +21,4 @@ function quickSort(array) {
 }
 
 
-console.log("Sorted array:", sort);
+console.log("Sorted array:", quickSort(myArray));
