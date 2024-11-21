@@ -33,8 +33,5 @@ console.log(nthFibonnaciMem(8))
 console.log(nthFibonacciMemArr(8))
 console.log(nthFibonnaciIter(8))
 
-function nthFibonnaci2(n) {
-  if (n <= 2) return 1;
-  return nthFibonnaci2(n - 1) + nthFibonnaci2(n - 2);
-}
+
 
