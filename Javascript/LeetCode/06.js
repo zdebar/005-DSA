@@ -1,4 +1,4 @@
-// Missing Number ---- OK
+// Missing Number 
 const myList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
 
 function missingNumber(lst, n) {
@@ -9,10 +9,10 @@ function missingNumber(lst, n) {
 
 console.log("Missing number", missingNumber(myList,100));
 
-// Find Pairs - LeetCode Two Sum ---- OK
+// Find Pairs - LeetCode Two Sum
 function findPairs(nums, target) {
     for (let i = 0; i < nums.length; i++) {
-        for (let j = i +1; j < nums.length; j++) {
+        for (let j = i + 1; j < nums.length; j++) {
             if (nums[i] === nums[j]) {
                 continue;
             }
@@ -26,16 +26,6 @@ function findPairs(nums, target) {
 const myListPairs = [1, 2, 3, 2, 3, 4, 5, 6];
 findPairs(myListPairs, 6);
 
-function twoSum(nums, target) {
-    const seen = {};
-    for (let i = 0; i < nums.length; i++) {
-        let complement = target - nums[i];
-        if (seen.hasOwnProperty(complement)) {
-            return [seen[complement], i];
-        }
-        seen[nums[i]] = i;
-    }
-}
 
 // Find a number ---- OK
 function findNumber(array, number) {
@@ -49,6 +39,7 @@ function findNumber2(array, number) {
   }
 
 const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 
 // Find max product of two integers ---- OK
 function maxProduct(arr) {
