@@ -14,16 +14,16 @@ function factorialTabulation(n) {
   return factorials[n];
 }
 
+function factorialRecursive(n) {
+  if (n === 0 || n === 1) return 1;
+  return n * factorialRecursive(n - 1);
+}
+
 function factorialRecursiveMemo(n, memo = []) {
   if (n === 0 || n === 1) return 1;
   if (n in memo) return memo[n];
   memo[n] = n * factorialRecursiveMemo(n - 1, memo);
   return memo[n]
-}
-
-function factorialRecursive(n) {
-  if (n === 0 || n === 1) return 1;
-  return n * factorialRecursive(n - 1);
 }
 
 function factorialTailRecursive(n, accumulator = 1) {

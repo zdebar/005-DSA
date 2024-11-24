@@ -1,6 +1,6 @@
-function nthFibonnaci(n) {
+function nthFibonnaciRecursive(n) {
   if (n <= 2) return 1;
-  return nthFibonnaci(n-1) + nthFibonnaci(n-2)
+  return nthFibonnaciRecursive(n-1) + nthFibonnaciRecursive(n-2)
 }
 
 function nthFibonnaciMem(n, memo = {}) {
@@ -15,6 +15,11 @@ function nthFibonacciMemArr(n, memo = []) {
   if (memo[n] !== undefined) return memo[n];
   memo[n] = nthFibonacciMemArr(n - 1, memo) + nthFibonacciMemArr(n - 2, memo);
   return memo[n];
+}
+
+function nthFibonacciTailRecursive(n, a = 1, b = 1) {
+  if (n <= 1) return a; 
+  return nthFibonacciTailRecursive(n - 1, b, a + b); 
 }
 
 function nthFibonnaciIter(n) {

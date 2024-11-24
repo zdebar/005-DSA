@@ -1,50 +1,51 @@
 // Bubble Sort
-function bubbleSort(customList) {
-  for (let i = 0; i < customList.length - 1; i++) {
-      for (let j = 0; j < customList.length - i - 1; j++) {
-          if (customList[j] > customList[j + 1]) {
-              [customList[j], customList[j + 1]] = [customList[j + 1], customList[j]];
-          }
-      }
-  }
-  console.log(customList);
+function bubbleSort(arr) {
+    // makes the highest value bubble up
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+        }
+    }
 }
 
 // Selection Sort
-function selectionSort(customList) {
-  for (let i = 0; i < customList.length; i++) {
-      let minIndex = i;
-      for (let j = i + 1; j < customList.length; j++) {
-          if (customList[minIndex] > customList[j]) {
-              minIndex = j;
-          }
-      }
-      [customList[i], customList[minIndex]] = [customList[minIndex], customList[i]];
-  }
-  console.log(customList);
+function selectionSort(arr) {
+    // finds the lowest value in an array and moves it to the front of the array
+    for (let i = 0; i < arr.length - 1; i++) {
+        let minIndex = i;
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[minIndex] > arr[j]) {
+                minIndex = j;
+            }
+        }
+        [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+    }
 }
 
 // Insertion Sort
-function insertionSort(customList) {
-  for (let i = 1; i < customList.length; i++) {
-      let key = customList[i];
-      let j = i - 1;
-      while (j >= 0 && key < customList[j]) {
-          customList[j + 1] = customList[j];
-          j--;
-      }
-      customList[j + 1] = key;
-  }
-  return customList;
+function insertionSort(arr) {
+    // takes one value at a time from the unsorted part of the array and puts it into the right place in the sorted part of the array, until the array is sorted
+    for (let i = 1; i < arr.length; i++) {
+        let currentValue = arr[i];
+        let j = i - 1;
+        while (j >= 0 && currentValue < arr[j]) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = currentValue;
+    }
+    return arr;
 }
 
 // Bucket Sort
-function bucketSort(customList) {
-  const numberOfBuckets = Math.round(Math.sqrt(customList.length));
-  const maxValue = Math.max(...customList);
+function bucketSort(arr) {
+  const numberOfBuckets = Math.round(Math.sqrt(arr.length));
+  const maxValue = Math.max(...arr);
   let arr = Array.from({ length: numberOfBuckets }, () => []);
   
-  customList.forEach(item => {
+  arr.forEach(item => {
       let indexB = Math.ceil(item * numberOfBuckets / maxValue);
       arr[indexB - 1].push(item);
   });
@@ -56,11 +57,11 @@ function bucketSort(customList) {
   let k = 0;
   for (let i = 0; i < numberOfBuckets; i++) {
       for (let j = 0; j < arr[i].length; j++) {
-          customList[k] = arr[i][j];
+          arr[k] = arr[i][j];
           k++;
       }
   }
-  return customList;
+  return arr;
 }
 
 // Merge Sort
