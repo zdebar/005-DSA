@@ -7,10 +7,14 @@ function selectionSort(arr) {
 
     // cycles through unsorted part of array, and looks for lowest value
     for (let j = i + 1; j < n; j++) { 
-      if (arr[minIndex] > arr[j]) minIndex = j;
+      if (arr[minIndex] > arr[j]) {
+        minIndex = j;
+      }
     }
 
     // Swap lowest value to sorted part of array
-    [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+    if (minIndex !== i) {
+      [arr[minIndex], arr[j]] = [arr[j], arr[minIndex]];
+    }
   }
 }

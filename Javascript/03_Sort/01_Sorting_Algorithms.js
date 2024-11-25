@@ -1,18 +1,3 @@
-// Insertion Sort
-function insertionSort(arr) {
-    // takes one value at a time from the unsorted part of the array and puts it into the right place in the sorted part of the array, until the array is sorted
-    for (let i = 1; i < arr.length; i++) {
-        let currentValue = arr[i];
-        let j = i - 1;
-        while (j >= 0 && currentValue < arr[j]) {
-            arr[j + 1] = arr[j];
-            j--;
-        }
-        arr[j + 1] = currentValue;
-    }
-    return arr;
-}
-
 // Bucket Sort
 function bucketSort(arr) {
   const numberOfBuckets = Math.round(Math.sqrt(arr.length));
@@ -86,27 +71,7 @@ function mergeSort(customList, l, r) {
   return customList;
 }
 
-// Quick Sort
-function partition(customList, low, high) {
-  let i = low - 1;
-  let pivot = customList[high];
-  for (let j = low; j < high; j++) {
-      if (customList[j] <= pivot) {
-          i++;
-          [customList[i], customList[j]] = [customList[j], customList[i]];
-      }
-  }
-  [customList[i + 1], customList[high]] = [customList[high], customList[i + 1]];
-  return i + 1;
-}
 
-function quickSort(customList, low, high) {
-  if (low < high) {
-      const pi = partition(customList, low, high);
-      quickSort(customList, low, pi - 1);
-      quickSort(customList, pi + 1, high);
-  }
-}
 
 // Heap Sort
 function heapify(customList, n, i) {
