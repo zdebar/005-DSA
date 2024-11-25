@@ -1,14 +1,16 @@
-function swap(a,b) {
-  [a, b] = [b, a];
-}
-
 function selectionSort(arr) {
   // select lowest, swappes to the front
-  for (let i = 0; i < arr.length - 1; i++) {
+  // cycles for n-1 times, new position in sorted part of array
+  let n = arr.length;
+  for (let i = 0; i < n - 1; i++) { 
     let minIndex = i;
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[minIndex] < arr[j]) minIndex = j;
+
+    // cycles through unsorted part of array, and looks for lowest value
+    for (let j = i + 1; j < n; j++) { 
+      if (arr[minIndex] > arr[j]) minIndex = j;
     }
-    swap(arr[i], arr[minIndex])
+
+    // Swap lowest value to sorted part of array
+    [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
   }
 }
