@@ -14,7 +14,7 @@ function selectionSort(arr) {
 
     // Swap lowest value to sorted part of array
     if (minIndex !== i) {
-      [arr[minIndex], arr[j]] = [arr[j], arr[minIndex]];
+      [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]];
     }
   }
 }
