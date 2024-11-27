@@ -164,13 +164,3 @@ class LinkedList {
     return poppedNode;
   }
 }
-
-// Testing the LinkedList class
-const linkedList = new LinkedList();
-linkedList.append(10);
-linkedList.append(20);
-linkedList.append(30);
-linkedList.append(40);
-console.log(linkedList.toString()); // Output: 10 -> 20 -> 30 -> 40
-console.log(linkedList.remove(0)); // Output: Node with value 10
-console.log(linkedList.toString()); // Output: 20 -> 30 -> 40
