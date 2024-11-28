@@ -74,12 +74,3 @@ class Queue {
       this.linkedList.tail = null;
   }
 }
-
-// Usage example
-const custQueue = new Queue();
-custQueue.enqueue(1);
-custQueue.enqueue(2);
-custQueue.enqueue(3);
-console.log(custQueue.toString());  // Output: "1 2 3"
-console.log(custQueue.peek());     // Output: Node { value: 1, next: Node { value: 2, next: [Node] } }
-console.log(custQueue.toString());  // Output: "1 2 3"

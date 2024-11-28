@@ -75,17 +75,3 @@ class BinaryTree {
       return "The BT has been successfully deleted";
   }
 }
-
-// Create a new binary tree
-const newBT = new BinaryTree(8);
-console.log(newBT.insertNode("Drinks"));
-console.log(newBT.insertNode("Hot"));
-console.log(newBT.insertNode("Cold"));
-console.log(newBT.insertNode("Tea"));
-console.log(newBT.insertNode("Coffee"));
-
-// Delete the binary tree
-console.log(newBT.deleteBT());
-
-// Attempt to do level order traversal after deletion (this won't work after deletion)
-newBT.levelOrderTraversal(1);

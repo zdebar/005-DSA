@@ -1,29 +1,33 @@
-function radixSort(array) {
-    let radixArray = new Array(10).fill().map(() => []);
-    let maxVal = Math.max(...array);
-    let exp = 1;
-  
-    while (Math.floor(maxVal / exp) > 0) {
-      // Distribute elements into buckets based on current digit
-      while (array.length > 0) {
-        let val = array.pop();
-        let radixIndex = Math.floor(val / exp) % 10;
-        radixArray[radixIndex].push(val);
-      }
-  
-      // Collect elements from the buckets back into the array
-      for (let bucket of radixArray) {
-        while (bucket.length > 0) {
-          let val = bucket.pop();
-          array.push(val);
-        }
-      }
-  
-      // Move to the next digit
-      exp *= 10;
+function radixSort(arr) {
+  if (arr.length === 0) return arr;
+
+  const getMax = (nums) => Math.max(...nums);
+
+  const getDigit = (num, place) => {
+    return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
+  };
+
+  const digitCount = (num) => {
+    if (num === 0) return 1;
+    return Math.floor(Math.log10(Math.abs(num))) + 1;
+  };
+
+  const maxDigits = digitCount(getMax(arr));
+
+  for (let k = 0; k < maxDigits; k++) {
+    const buckets = Array.from({ length: 10 }, () => []);
+
+    for (let num of arr) {
+      const digit = getDigit(num, k);
+      buckets[digit].push(num);
     }
-  
-    return array;
+
+    arr = [].concat(...buckets);
   }
+
+  return arr;
+}
+
+
   
   

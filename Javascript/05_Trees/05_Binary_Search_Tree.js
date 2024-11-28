@@ -151,18 +151,3 @@ function deleteBST(rootNode) {
   rootNode.rightChild = null;
   return "The BST has been successfully deleted";
 }
-
-// Create the binary search tree
-const newBST = new BSTNode(null);
-insertNode(newBST, 70);
-insertNode(newBST, 50);
-insertNode(newBST, 90);
-insertNode(newBST, 30);
-insertNode(newBST, 60);
-insertNode(newBST, 80);
-insertNode(newBST, 100);
-insertNode(newBST, 20);
-insertNode(newBST, 40);
-
-console.log(deleteBST(newBST));
-levelOrderTraversal(newBST);
