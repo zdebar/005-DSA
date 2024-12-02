@@ -129,3 +129,31 @@ function UncommonChars(A, B) {
   const uncommon = [...setA].filter(x => !setB.has(x)).concat([...setB].filter(x => !setA.has(x))).sort();
   return uncommon.length === 0 ? -1 : uncommon.join("");
 }
+
+
+// checks if all number in range A, B are present in array arr
+function check_elements(arr, n, A, B) {
+  const numberSet = new Set();
+
+  for (let i = A; i <= B; i++) {
+    numberSet.add(i);
+  }
+
+  for (const num of arr) {
+      if (numberSet.has(num)) numberSet.delete(num);
+      if (numberSet.size === 0) return true;
+  }
+
+  return false;
+}
+
+
+// find odd occurence (only number appearing odd times)
+function getOddOccurrence(arr) {
+  let result = 0;
+  for (const num of arr) {
+    result = num; // XOR each number
+  }
+  return result;
+}
+
