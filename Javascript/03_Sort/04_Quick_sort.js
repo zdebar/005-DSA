@@ -1,8 +1,8 @@
 // option 1 (recursive) - extra memory but faster
 function quickSort(arr) {
-  let n = arr.length;
-  let pivot = arr[n - 1];
-  let left = [], right = [];
+  const n = arr.length;
+  const pivot = arr[n - 1];
+  const left = [], right = [];
   
   if (n <= 1) {
     return arr;
@@ -16,32 +16,32 @@ function quickSort(arr) {
     }
   }
 
-  return [...quickSort(left), pivot, ...quickSort(right)]
+  return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
 
 // option 2 (recursive) - standard solution
-function partition(arr, low, high) { 
-  let pivot = arr[high]; 
-  let i = low - 1; 
+function quickSort(arr, low = 0, high = arr.length - 1) { 
+  if (low < high) { // Ensure valid range
+    const pivot = partition(arr, low, high); // Partitioning step
 
-  for (let j = low; j <= high - 1; j++) { 
-    if (arr[j] < pivot) { 
-      i++; 
-      [arr[i], arr[j]] = [arr[j], arr[i]];  
+    quickSort(arr, low, pivot - 1); // Recursively sort left part
+    quickSort(arr, pivot + 1, high); // Recursively sort right part
+  }
+}
+
+function partition(arr, low, high) { 
+  const pivot = arr[high]; // Choosing pivot as the last element
+  let i = low; // pointer for smaller elements
+
+  for (let j = low + 1; j < high; j++) { 
+    if (arr[j] < pivot) { // Element smaller than pivot found
+      [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap smaller element to the left side
+      i++;
     } 
   } 
-
-  [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];  
-  return i + 1;
+  
+  // Place the pivot element in the correct position
+  [arr[i], arr[high]] = [arr[high], arr[i]];  
+  return i; // Return the partition index
 } 
-
-function quickSort(arr, low, high) { 
-  if (low >= high) return; 
-  let pi = partition(arr, low, high); 
-
-  quickSort(arr, low, pi - 1); 
-  quickSort(arr, pi + 1, high); 
-} 
-
-

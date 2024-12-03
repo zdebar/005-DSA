@@ -1,6 +1,6 @@
-function countingSort2(array) {
+function countingSort(array) {
     // counting object
-    let count = {};
+    const count = {};
 
     for (const num of array) {
         count[num] = (count[num] || 0) + 1;

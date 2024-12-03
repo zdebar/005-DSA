@@ -1,18 +1,23 @@
 function bucketSort(arr) {
   if (arr.length === 0) return arr;
 
-  // 1. Create empty buckets
-  const bucketCount = Math.ceil(Math.sqrt(arr.length)); // Number of buckets
+  // Find the range of the array
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  const range = max - min;
+
+  // Number of buckets (based on square root of the array length)
+  const bucketCount = Math.ceil(Math.sqrt(arr.length));
   const buckets = Array.from({ length: bucketCount }, () => []);
 
-  // 2. Place array elements in corresponding buckets
+  // Distribute elements into buckets
   for (let num of arr) {
-    const bucketIndex = Math.floor(num * bucketCount); // Determine bucket index
+    const bucketIndex = Math.floor(((num - min) / range) * (bucketCount - 1));
     buckets[bucketIndex].push(num);
   }
 
-  // 3. Sort each bucket and concatenate results
+  // Sort each bucket and merge them
   return buckets.reduce((sortedArray, bucket) => {
-    return sortedArray.concat(bucket.sort((a, b) => a - b)); // Use JavaScript's built-in sort for simplicity
+    return sortedArray.concat(insertionSort(bucket));
   }, []);
 }

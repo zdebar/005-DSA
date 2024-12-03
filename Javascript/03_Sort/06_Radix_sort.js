@@ -1,33 +1,23 @@
 function radixSort(arr) {
-  if (arr.length === 0) return arr;
+  const maxVal = Math.max(...arr); 
+  let exp = 1; 
+  const radixArray = Array.from({ length: 10 }, () => []);
 
-  const getMax = (nums) => Math.max(...nums);
-
-  const getDigit = (num, place) => {
-    return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
-  };
-
-  const digitCount = (num) => {
-    if (num === 0) return 1;
-    return Math.floor(Math.log10(Math.abs(num))) + 1;
-  };
-
-  const maxDigits = digitCount(getMax(arr));
-
-  for (let k = 0; k < maxDigits; k++) {
-    const buckets = Array.from({ length: 10 }, () => []);
-
-    for (let num of arr) {
-      const digit = getDigit(num, k);
-      buckets[digit].push(num);
+  while (Math.floor(maxVal / exp) > 0) {
+    while (arr.length > 0) {
+      const value = arr.pop();
+      const radixIndex = Math.floor(value / exp) % 10;
+      radixArray[radixIndex].push(value);
     }
 
-    arr = [].concat(...buckets);
+    for (const bucket of radixArray) {
+      while (bucket.length > 0) {
+        arr.push(bucket.pop());
+      }
+    }
+
+    exp *= 10; 
   }
 
   return arr;
-}
-
-
-  
-  
+} 
