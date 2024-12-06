@@ -4,8 +4,6 @@ function foo(array) {
     let product = 1;
     for (let i of array) {
         sum += i;
-    }
-    for (let i of array) {
         product *= i;
     }
     console.log("Sum = " + sum + ", Product = " + product);

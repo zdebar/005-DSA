@@ -4,6 +4,7 @@ function linearSearch(arr, targetVal) {
         return i;
     }
   }
+  
   return -1;
 }
 

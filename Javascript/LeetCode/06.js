@@ -36,7 +36,7 @@ function findNumber(array, number) {
 
 function findNumber2(array, number) {
     return array.indexOf(number)
-  }
+}
 
 const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
