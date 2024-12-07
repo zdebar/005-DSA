@@ -9,9 +9,6 @@ function foo(array) {
     console.log("Sum = " + sum + ", Product = " + product);
 }
 
-const ar1 = [1, 2, 3, 4];
-foo(ar1);
-
 // Question 2 PRINT PAIRS ----- OK
 function printPairs(array) {
     for (let i of array) {
@@ -41,9 +38,6 @@ function printUnorderedPairs(arrayA, arrayB) {
     }
 }
 
-const arrayA = [1, 2, 3, 4, 5];
-const arrayB = [2, 6, 7, 8];
-
 // Question 5 PRINT UNORDERED PAIRS 2 ARRAYS ----- OK
 function printUnorderedPairsWithLoop(arrayA, arrayB) {
     for (let i = 0; i < arrayA.length; i++) {
@@ -54,8 +48,6 @@ function printUnorderedPairsWithLoop(arrayA, arrayB) {
         }
     }
 }
-// Uncomment to test this function, but be aware of the loop size
-// printUnorderedPairsWithLoop(arrayA, arrayB);
 
 // Question 6 REVERSE ARRAY ----- OK
 function reverse(array) {
@@ -67,5 +59,3 @@ function reverse(array) {
     }
     console.log(array);
 }
-
-reverse(arrayA);

@@ -1,7 +1,4 @@
 // Count word frequency
-words = ['apple', 'orange', 'banana', 'apple', 'orange', 'apple'] 
-console.log(countWordFrequency(words))
-
 function countWordFrequency(words) {
   const wordCount = {};
   for (let word of words) {
@@ -9,7 +6,6 @@ function countWordFrequency(words) {
   }
   return wordCount;
 }
-
 
 // Common keys
 function mergeDicts(dict1, dict2) {
@@ -19,11 +15,6 @@ function mergeDicts(dict1, dict2) {
   }
   return result;
 }
-
-const dict1 = { a: 1, b: 2, c: 3 };
-const dict2 = { b: 3, c: 4, d: 5 };
-console.log(mergeDicts(dict1, dict2)); 
-
 
 // Keys with highest values
 function maxValueKey(myDict) {
@@ -39,9 +30,6 @@ function maxValueKey(myDict) {
 
   return maxKey;
 }
-const myDict = { a: 10, b: 20, c: 5 };
-console.log(maxValueKey(myDict)); // Output: 'b'
-
 
 // Reverse dictionary
 function reverseDict(myDict) {
@@ -60,10 +48,6 @@ function reverseDict(myDict) {
   return reversedDict;
 }
 
-const myDict2 = { a: 1, b: 2, c: 3 };
-console.log(reverseDict(myDict2)); 
-
-
 // Conditional filter
 function filterDict(myDict, condition) {
   const filteredObj = {};
@@ -74,12 +58,6 @@ function filterDict(myDict, condition) {
   }
   return filteredObj;
 }
-
-const myDict3 = { a: 10, b: 20, c: 5 };
-const condition = (key, value) => value > 10;
-console.log(filterDict(myDict3, condition)); 
-
-
 
 // Check same frequency
 function checkSameFrequency(list1, list2) {
@@ -95,7 +73,3 @@ function checkSameFrequency(list1, list2) {
   const count2 = countElements(list2);
   return JSON.stringify(count1) === JSON.stringify(count2);
 }
-
-const list1 = [1, 2, 3, 2, 1];
-const list2 = [1, 2, 2, 3, 1];
-console.log(checkSameFrequency(list1, list2));

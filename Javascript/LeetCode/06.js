@@ -7,8 +7,6 @@ function missingNumber(lst, n) {
     return total - sum;
 }
 
-console.log("Missing number", missingNumber(myList,100));
-
 // Find Pairs - LeetCode Two Sum
 function findPairs(nums, target) {
     for (let i = 0; i < nums.length; i++) {
@@ -23,10 +21,6 @@ function findPairs(nums, target) {
     }
 }
 
-const myListPairs = [1, 2, 3, 2, 3, 4, 5, 6];
-findPairs(myListPairs, 6);
-
-
 // Find a number ---- OK
 function findNumber(array, number) {
     array.forEach((item, index) => {
@@ -37,9 +31,6 @@ function findNumber(array, number) {
 function findNumber2(array, number) {
     return array.indexOf(number)
 }
-
-const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 
 // Find max product of two integers ---- OK
 function maxProduct(arr) {
@@ -55,16 +46,10 @@ function maxProduct(arr) {
     return max1 * max2;
 }
 
-const arrProduct = [1, 7, 3, 4, 9, 5];
-console.log(maxProduct(arrProduct));  // Output: 63
-
 // Middle ---- OK
 function middle(lst) {
     return lst.slice(1, -1);
 }
-
-const myListMiddle = [1, 2, 3, 4];
-console.log(middle(myListMiddle));  // Output: [2, 3]
 
 // Diagonal sum of 2D List ---- OK
 function diagonalSum(matrix) {
@@ -89,9 +74,6 @@ function firstSecond(myList) {
     return [max1, max2];
 }
 
-const myListBestScore = [84, 85, 86, 87, 85, 90, 85, 83, 23, 45, 84, 1, 2, 0];
-console.log(firstSecond(myListBestScore));  // Output: [90, 87]
-
 // Remove duplicates ---- OK
 function removeDuplicates(lst) {
     const uniqueLst = [];
@@ -104,9 +86,6 @@ function removeDuplicates(lst) {
     });
     return uniqueLst;
 }
-
-const myListDuplicates = [1, 1, 2, 2, 3, 4, 5];
-console.log(removeDuplicates(myListDuplicates));  // Output: [1, 2, 3, 4, 5]
 
 // Pairs that sum to target ---- OK
 function pairSum(arr, targetSum) {
@@ -121,10 +100,6 @@ function pairSum(arr, targetSum) {
     return result;
 }
 
-const arrPairSum = [2, 4, 3, 5, 6, -2, 4, 7, 8, 9];
-const targetSum = 7;
-console.log(pairSum(arrPairSum, targetSum));  // Output: ['2+5', '4+3', '3+4', '-2+9']
-
 // Contains Duplicate ---- OK
 function containsDuplicate(nums) {
     const seen = new Set();
@@ -134,9 +109,6 @@ function containsDuplicate(nums) {
     }
     return false;
 }
-
-const numsDuplicate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1];
-console.log(containsDuplicate(numsDuplicate));  // Output: true
 
 // Check if two lists are permutations ---- OK
 function permutation(list1, list2) {
