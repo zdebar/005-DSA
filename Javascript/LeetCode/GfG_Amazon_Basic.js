@@ -3,7 +3,6 @@ function reverseString(str) {
   return str.split('').reverse().join('');
 }
 
-
 // Sum highest and lowest value
 function findSum(arr) {
   if (arr.length === 0) return null;
@@ -19,7 +18,6 @@ function findSum(arr) {
 
   return max + min;
 }
-
 
 // Return first unique item of array
 function findFirstUnique(arr) {
@@ -40,7 +38,6 @@ function findFirstUnique(arr) {
   return null;
 }
 
-
 // Function to find elements in the array that are equal to their index
 function valueEqualToIndex(arr) {
   const result = [];
@@ -51,7 +48,6 @@ function valueEqualToIndex(arr) {
   }
   return result;
 }
-
 
 // Function to locate the occurrence of the string x in the string s.
 firstOccurence(txt, pat) {
@@ -72,7 +68,6 @@ firstOccurence(txt, pat) {
   }
   return -1;
 }
- 
 
 // For each element in the array, check whether the right adjacent element (on the next immediate position) of the array is smaller. If next element is smaller, update the current index to that element. If not, then update to -1.
 function immediateSmaller(arr) {
@@ -89,7 +84,6 @@ function immediateSmaller(arr) {
   arr[arr.length - 1] = -1;
   return arr;
 }
-
 
 // find first and second smallest
 function minAnd2ndMin(arr) {
@@ -109,12 +103,10 @@ function minAnd2ndMin(arr) {
   return (second === Infinity) ? [-1] : [first, second];
 }
 
-
 // convert all 0 to 5 in integer
 function convertFive(num) {
   return +num.toString().replace(/0/g, '5');
 }
-
 
 // remove characters of string s2 from sting s1
 function removeChars(s1, s2){
@@ -122,14 +114,12 @@ function removeChars(s1, s2){
   return s1.split("").filter(char => !charSet.has(char)).join("");
 }
 
-
 // find uncommon characters in two strings
 function UncommonChars(A, B) {
   const setA = new Set(A), setB = new Set(B);
   const uncommon = [...setA].filter(x => !setB.has(x)).concat([...setB].filter(x => !setA.has(x))).sort();
   return uncommon.length === 0 ? -1 : uncommon.join("");
 }
-
 
 // checks if all number in range A, B are present in array arr
 function check_elements(arr, n, A, B) {
@@ -147,7 +137,6 @@ function check_elements(arr, n, A, B) {
   return false;
 }
 
-
 // find odd occurence (only number appearing odd times)
 function getOddOccurrence(arr) {
   let result = 0;
@@ -156,4 +145,3 @@ function getOddOccurrence(arr) {
   }
   return result;
 }
-
