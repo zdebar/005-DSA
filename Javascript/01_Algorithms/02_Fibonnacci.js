@@ -37,6 +37,3 @@ console.log(nthFibonnaci(8))
 console.log(nthFibonnaciMem(8))
 console.log(nthFibonacciMemArr(8))
 console.log(nthFibonnaciIter(8))
-
-
-

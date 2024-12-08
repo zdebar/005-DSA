@@ -7,4 +7,3 @@ function linearSearch(arr, targetVal) {
   
   return -1;
 }
-

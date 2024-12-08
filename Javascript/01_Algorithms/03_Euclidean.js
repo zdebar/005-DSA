@@ -6,4 +6,3 @@ function gcd(a, b) {
   }
   return Math.abs(a); // Ensure the GCD is always positive
 }
-
