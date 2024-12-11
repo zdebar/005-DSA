@@ -13,53 +13,37 @@ class BinarySearchTree {
         this.root = null; // Root of the tree
     }
 
-    // Insert a value into the BST
-    insert(value) {
-        const newNode = new Node(value);
-
+    insert(value, node = this.root) {
         if (this.root === null) {
-            this.root = newNode; // Set root if tree is empty
-        } else {
-            this._insertNode(this.root, newNode);
-        }
-    }
-
-    // Helper method to insert nodes recursively
-    _insertNode(node, newNode) {
-        if (newNode.value < node.value) {
-            // Insert in the left subtree
+            this.root = new Node(value);
+            return;
+        } else if (value < node.value) {
             if (node.left === null) {
-                node.left = newNode;
+                node.left = new Node(value);
             } else {
-                this._insertNode(node.left, newNode);
+                this.insert(value, node.left);
             }
-        } else {
-            // Insert in the right subtree
+        } else if (value > node.value) {
             if (node.right === null) {
-                node.right = newNode;
+                node.right = new Node(value);
             } else {
-                this._insertNode(node.right, newNode);
+                this.insert(value, node.right);
             }
         }
-    }
-
-    // Search for a value in the BST
-    search(value) {
-        return this._searchNode(this.root, value);
     }
 
     // Helper method to search nodes recursively
-    _searchNode(node, value) {
+    search(value, node = this.root) {
         if (node === null) {
-            return false; // Not found
+            return false;
         }
 
         if (value === node.value) {
             return true; // Value found
         } else if (value < node.value) {
-            return this._searchNode(node.left, value); // Search in left subtree
+            return this.search(value, node.left); // Search in left subtree
         } else {
-            return this._searchNode(node.right, value); // Search in right subtree
+            return this.searchNode(value, node.right); // Search in right subtree
         }
     }
 
