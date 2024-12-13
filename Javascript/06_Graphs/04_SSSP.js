@@ -4,8 +4,7 @@ class Graph {
   }
 
   bfs(start, end) {
-    let queue = [];
-    queue.push([start]);
+    let queue = [[start]];
     
     while (queue.length > 0) {
       let path = queue.shift();

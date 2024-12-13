@@ -1,13 +1,13 @@
 class TrieNode {
     constructor() {
-        this.children = {}; // Maps characters to nodes
-        this.isEndOfWord = false; // Marks the end of a word
+        this.children = {};
+        this.isEndOfWord = false; 
     }
 }
 
 class Trie {
     constructor() {
-        this.root = new TrieNode(); // Root of the Trie
+        this.root = new TrieNode(); 
     }
 
     // Insert a word into the Trie
@@ -27,11 +27,11 @@ class Trie {
         let node = this.root;
         for (let char of word) {
             if (!node.children[char]) {
-                return false; // Word not found
+                return false;
             }
             node = node.children[char];
         }
-        return node.isEndOfWord; // Return true if it's the end of a word
+        return node.isEndOfWord; 
     }
 
     // Check if there's any word starting with the given prefix
@@ -39,7 +39,7 @@ class Trie {
         let node = this.root;
         for (let char of prefix) {
             if (!node.children[char]) {
-                return false; // No word starts with this prefix
+                return false;
             }
             node = node.children[char];
         }
