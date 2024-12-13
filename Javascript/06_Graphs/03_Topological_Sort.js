@@ -11,28 +11,27 @@ class Graph {
     this.graph[vertex].push(edge);
   }
 
-  topologicalSortUtil(v, visited, stack) {
-    visited.push(v);
-
-    for (const i of this.graph[v]) {
-      if (!visited.includes(i)) {
-        this.topologicalSortUtil(i, visited, stack);
-      }
-    }
-
-    stack.unshift(v);  // Insert at the start (like stack.insert(0, v) in Python)
-  }
-
-  topologicalSort() {
-    const visited = [];
+  topologicalSortDFS() {
+    const visited = new Set();
     const stack = [];
 
-    for (const vertex of Object.keys(this.graph)) {
-      if (!visited.includes(vertex)) {
-        this.topologicalSortUtil(vertex, visited, stack);
+    function dfs(node) {
+      if (visited.has(node)) return;
+      visited.add(node);
+
+      for (const neighbor of this.graph[node]) {
+        dfs(neighbor);
+      }
+
+      stack.push(node);
+    }
+
+    for (const node in this.graph) {
+      if (!visited.has(node)) {
+        dfs(node);
       }
     }
 
-    console.log(stack);
+    return stack.reverse();
   }
 }
