@@ -27,7 +27,7 @@ function dijkstra(graph, initial) {
     for (let node of nodes) {
       if (visited.has(node)) {
         if (minNode === null || visited.get(node) < visited.get(minNode)) {
-            minNode = node;
+          minNode = node;
         }
       }
     }
@@ -52,31 +52,3 @@ function dijkstra(graph, initial) {
 
   return { visited, path };
 }
-
-const customGraph = new Graph();
-customGraph.addNode("A");
-customGraph.addNode("B");
-customGraph.addNode("C");
-customGraph.addNode("D");
-customGraph.addNode("E");
-customGraph.addNode("F");
-customGraph.addNode("G");
-customGraph.addEdge("A", "B", 2);
-customGraph.addEdge("A", "C", 5);
-customGraph.addEdge("B", "C", 6);
-customGraph.addEdge("B", "D", 1);
-customGraph.addEdge("B", "E", 3);
-customGraph.addEdge("C", "F", 8);
-customGraph.addEdge("D", "E", 4);
-customGraph.addEdge("E", "G", 9);
-customGraph.addEdge("F", "G", 7);
-
-// Test with original data
-console.log(dijkstra(customGraph, "A"));
-
-// Now modify the graph with the new distances
-customGraph.distances.set("D,E", 1);
-customGraph.distances.set("B,E", 6);
-
-// Test with the updated graph
-console.log(dijkstra(customGraph, "A"));

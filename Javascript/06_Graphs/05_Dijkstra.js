@@ -40,7 +40,7 @@ class Dijkstra {
       this.heap.sort((a, b) => a.minDistance - b.minDistance); // Min heap sort
       const actualVertex = this.heap.shift();
       if (actualVertex.visited) {
-          continue;
+        continue;
       }
 
       // Consider the neighbors

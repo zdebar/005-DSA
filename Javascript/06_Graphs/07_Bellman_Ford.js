@@ -48,20 +48,3 @@ class Graph {
     this.printSolution(dist);
   }
 }
-
-// Example usage
-const g = new Graph(5);
-g.addNode("A");
-g.addNode("B");
-g.addNode("C");
-g.addNode("D");
-g.addNode("E");
-g.addEdge("A", "C", 6);
-g.addEdge("A", "D", 6);
-g.addEdge("B", "A", 3);
-g.addEdge("C", "D", 1);
-g.addEdge("D", "C", 2);
-g.addEdge("D", "B", 1);
-g.addEdge("E", "B", 4);
-g.addEdge("E", "D", 2);
-g.bellmanFord("E");
